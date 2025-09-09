@@ -1,0 +1,402 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.App {
+  text-align: left;
+}
+
+/* POS Terminal Styles */
+.pos-terminal {
+  @apply bg-gray-100 min-h-screen p-4;
+}
+
+.pos-grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+}
+
+.pos-left-panel {
+  @apply lg:col-span-2 space-y-4;
+}
+
+.pos-right-panel {
+  @apply space-y-4;
+}
+
+.scanner-section {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.product-search {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.shopping-cart {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.payment-section {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+/* Inventory Styles */
+.inventory-dashboard {
+  @apply space-y-6;
+}
+
+.inventory-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+}
+
+.product-card {
+  @apply bg-white rounded-lg shadow-md p-4 border border-gray-200 hover:shadow-lg transition-shadow;
+}
+
+.product-image {
+  @apply w-full h-32 object-cover rounded-md mb-3;
+}
+
+.product-info {
+  @apply space-y-2;
+}
+
+.product-name {
+  @apply font-semibold text-gray-900 text-sm;
+}
+
+.product-price {
+  @apply text-lg font-bold text-green-600;
+}
+
+.stock-level {
+  @apply text-sm;
+}
+
+.stock-low {
+  @apply text-red-600 font-semibold;
+}
+
+.stock-normal {
+  @apply text-green-600;
+}
+
+.stock-out {
+  @apply text-red-800 font-bold;
+}
+
+/* Analytics Styles */
+.analytics-dashboard {
+  @apply space-y-6;
+}
+
+.metrics-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.metric-card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.metric-value {
+  @apply text-3xl font-bold text-gray-900;
+}
+
+.metric-label {
+  @apply text-sm font-medium text-gray-500 uppercase tracking-wide;
+}
+
+.chart-container {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+/* Customer Management Styles */
+.customer-dashboard {
+  @apply space-y-6;
+}
+
+.customer-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.customer-card {
+  @apply bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow;
+}
+
+.customer-avatar {
+  @apply w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-semibold;
+}
+
+.customer-info {
+  @apply space-y-2;
+}
+
+.customer-name {
+  @apply font-semibold text-gray-900;
+}
+
+.customer-email {
+  @apply text-sm text-gray-500;
+}
+
+.loyalty-points {
+  @apply text-sm font-medium text-blue-600;
+}
+
+/* Sales Styles */
+.sales-dashboard {
+  @apply space-y-6;
+}
+
+.transaction-list {
+  @apply bg-white rounded-lg shadow-md;
+}
+
+.transaction-item {
+  @apply border-b border-gray-200 p-4 hover:bg-gray-50;
+}
+
+.transaction-header {
+  @apply flex justify-between items-center;
+}
+
+.transaction-number {
+  @apply font-semibold text-gray-900;
+}
+
+.transaction-date {
+  @apply text-sm text-gray-500;
+}
+
+.transaction-amount {
+  @apply text-lg font-bold text-green-600;
+}
+
+.transaction-items {
+  @apply mt-2 space-y-1;
+}
+
+.transaction-item-row {
+  @apply flex justify-between text-sm;
+}
+
+/* Barcode Scanner Styles */
+.barcode-scanner {
+  @apply relative w-full h-64 bg-black rounded-lg overflow-hidden;
+}
+
+.scanner-overlay {
+  @apply absolute inset-0 flex items-center justify-center;
+}
+
+.scanner-frame {
+  @apply border-2 border-white border-dashed w-48 h-32 rounded-lg;
+}
+
+.scanner-status {
+  @apply absolute bottom-4 left-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded;
+}
+
+/* Payment Styles */
+.payment-methods {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.payment-method {
+  @apply p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors;
+}
+
+.payment-method.selected {
+  @apply border-blue-500 bg-blue-50;
+}
+
+.payment-amount {
+  @apply text-3xl font-bold text-center mb-6;
+}
+
+.payment-input {
+  @apply w-full p-4 text-2xl text-center border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Receipt Styles */
+.receipt {
+  @apply bg-white p-4 font-mono text-sm;
+  max-width: 300px;
+}
+
+.receipt-header {
+  @apply text-center border-b border-gray-300 pb-2 mb-2;
+}
+
+.receipt-items {
+  @apply space-y-1 mb-4;
+}
+
+.receipt-item {
+  @apply flex justify-between;
+}
+
+.receipt-total {
+  @apply border-t border-gray-300 pt-2 font-bold;
+}
+
+/* Loading States */
+.loading-spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600;
+}
+
+.loading-overlay {
+  @apply absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center;
+}
+
+/* Error States */
+.error-message {
+  @apply bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded;
+}
+
+.success-message {
+  @apply bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded;
+}
+
+/* Form Styles */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500;
+}
+
+.form-select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500;
+}
+
+.form-textarea {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500;
+}
+
+/* Button Styles */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500;
+}
+
+.btn-success {
+  @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+.btn-warning {
+  @apply bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500;
+}
+
+.btn-sm {
+  @apply px-3 py-1 text-sm;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-lg;
+}
+
+/* Table Styles */
+.table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.table-header {
+  @apply bg-gray-50;
+}
+
+.table-header-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.table-body {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.table-row {
+  @apply hover:bg-gray-50;
+}
+
+.table-cell {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50;
+}
+
+.modal-container {
+  @apply relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white;
+}
+
+.modal-header {
+  @apply flex items-center justify-between pb-3;
+}
+
+.modal-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.modal-close {
+  @apply text-gray-400 hover:text-gray-600;
+}
+
+.modal-body {
+  @apply py-3;
+}
+
+.modal-footer {
+  @apply flex justify-end space-x-2 pt-3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pos-grid {
+    @apply grid-cols-1;
+  }
+  
+  .metrics-grid {
+    @apply grid-cols-1;
+  }
+  
+  .inventory-grid {
+    @apply grid-cols-1;
+  }
+  
+  .customer-grid {
+    @apply grid-cols-1;
+  }
+  
+  .payment-methods {
+    @apply grid-cols-1;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .receipt {
+    max-width: none;
+    width: 100%;
+  }
+}
